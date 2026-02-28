@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patent Next Steps: Erfindung – Nächste Schritte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../shared/design-templates/step-wizard/step-wizard.css">
+  <style>
+    .wizard-app { font-family: 'Source Sans 3', sans-serif; }
+    .wizard-app h1 { font-weight: 700; font-size: 1.5rem; }
+    .wizard-app .wizard-subtitle { font-weight: 400; font-size: 1rem; color: #666; }
+    .wizard-step-label { font-weight: 500; }
+    .wizard-step-title { font-weight: 700; font-size: 1.35rem; }
+    .wizard-block h3 { font-weight: 600; font-size: 1rem; }
+    .wizard-block h4 { font-weight: 600; font-size: 0.95rem; margin: 1rem 0 0.5rem; }
+    .wizard-block p, .wizard-block li { font-weight: 400; }
+    .wizard-block strong { font-weight: 600; }
+    .wizard-progress-text { font-weight: 500; }
+    .wizard-btn { font-weight: 600; }
+    .wizard-block a { color: #FF7531; text-decoration: underline; }
+    .wizard-block a:hover { text-decoration: none; }
+    .wizard-block-dark a { color: #FF7531; }
+    .wizard-block.limitations { background: #fff8e6; border-color: #e6d9b3; }
+    .wizard-block.minimal { background: #e8f4f8; border-color: #b8d4e0; }
+    .wizard-block.handoff { background: #f0f5f0; border-color: #c8d8c8; }
+    .wizard-block-action { background: #fffbf8; border-color: #e8d4c8; border-left: 4px solid #FF7531; }
+    .wizard-block-tip { background: #e8f4f8; border-color: #b8d4e0; }
+    .wizard-block-info { background: #f8f8f8; border-color: #e5e5e5; }
+    .block-label { display: block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #666; margin-bottom: 0.35rem; }
+    .wizard-block-dark { background: #2d2d2d; color: #fff; }
+    .wizard-block-dark h3, .wizard-block-dark p, .wizard-block-dark li { color: #fff; }
+    .wizard-table-wrap { overflow-x: auto; margin: 0.5rem 0; }
+    .wizard-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .wizard-table th, .wizard-table td { padding: 0.5rem 0.75rem; text-align: left; border: 1px solid #e5e5e5; }
+    .wizard-table th { background: #f0f0f0; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<div class="wizard-app" id="wizard">
+  <div class="wizard-container">
+    <header style="margin-bottom: 1.5rem;">
+      <h1 style="margin: 0 0 0.25rem;">Patent Next Steps</h1>
+      <p class="wizard-subtitle" style="margin: 0;">Erfindung gemacht – was als Nächstes tun? Schritt für Schritt</p>
+    </header>
+
+    <div class="wizard-progress">
+      <div class="wizard-progress-bar">
+        <div class="wizard-progress-fill"></div>
+      </div>
+      <span class="wizard-progress-text">Schritt 1 von 6</span>
+    </div>
+
+    <!-- Step 0 -->
+    <div class="wizard-step active" data-step="0">
+      <p class="wizard-step-label">Schritt 0</p>
+      <h2 class="wizard-step-title">Einleitung</h2>
+      
+      <div class="wizard-block wizard-block-info">
+        <h3>Du hast eine Erfindung – was jetzt?</h3>
+        <p>Du hast eine Idee oder einen Prototyp, aber dir fehlt der Überblick. Welche Schritte sind sinnvoll? Was solltest du früh klären? Wen solltest du wann einbeziehen? Gerade im Projekt- oder Forschungskontext kann das entscheidend sein.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Was dieser Guide macht</h3>
+        <ol>
+          <li><strong>Standort und Ansprechpartner:innen klären</strong> – Wo bist du? Uni, Firma, Startup?</li>
+          <li><strong>Zeitfenster</strong> – Welche Deadlines? Publication trap?</li>
+          <li><strong>Schutzstrategie</strong> – Patent, Publikation, Trade Secret – oder Kombination?</li>
+          <li><strong>Prioritäten</strong> – Was zuerst?</li>
+          <li><strong>Ergebnis</strong> – Konkrete nächste Aktion</li>
+        </ol>
+        <p>Am Ende hast du eine <strong>klare Next Action</strong> und eine <strong>Checkliste</strong>, die zu deinem Kontext passt.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Drei typische Szenarien</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Szenario</th><th>Typische Fragen</th></tr>
+            <tr><td><strong>Uni / Forschungsinstitut</strong></td><td>Meldepflicht? TTO? Wer entscheidet über Patent?</td></tr>
+            <tr><td><strong>Firma mit F&E</strong></td><td>Patentstelle? Vorgesetzte? Meldepflicht im Arbeitsvertrag?</td></tr>
+            <tr><td><strong>Startup / Solo</strong></td><td>Patentanwalt wann? Kosten? Priorität vor Entwicklung?</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block limitations">
+        <h3>Wichtige Grenze</h3>
+        <p>Dies ist <strong>keine Rechtsberatung</strong>. Der Guide gibt Orientierung – keine juristische Vollberatung. Bei konkreten rechtlichen Fragen: immer Fachperson (Patentanwalt, Patentstelle) einbeziehen.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="wizard-step" data-step="1">
+      <p class="wizard-step-label">Schritt 1</p>
+      <h2 class="wizard-step-title">Standort und Ansprechpartner:innen klären</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Ziel</span>
+        <p>Klarheit über deinen Kontext, Meldepflicht und erste Ansprechpartner:innen.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>1. Ordne dich einem Kontext zu</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Kontext</th><th>Typische Situation</th></tr>
+            <tr><td><strong>Uni / Forschungsinstitut</strong></td><td>Angestellt in Forschung; Erfindung im Rahmen von Projekt oder Promotion</td></tr>
+            <tr><td><strong>Firma mit F&E</strong></td><td>Angestellt in F&E; Erfindung im Arbeitsbereich</td></tr>
+            <tr><td><strong>Startup / Solo</strong></td><td>Gründer:in oder freiberuflich; Erfindung gehört dir (oder dem Startup)</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>2. Prüfe: Gibt es eine Meldepflicht?</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Kontext</th><th>Meldepflicht</th><th>Typischer Ansprechpartner</th></tr>
+            <tr><td>Uni / Forschungsinstitut</td><td>Ja, in der Regel</td><td>TTO, Erfindungsmeldestelle</td></tr>
+            <tr><td>Firma mit F&E</td><td>Oft ja</td><td>Patentstelle, Vorgesetzte</td></tr>
+            <tr><td>Startup / Solo</td><td>Nein</td><td>Direkt Patentanwalt oder Beratung</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <h3>Tipp</h3>
+        <p><strong>Falsche Reihenfolge:</strong> Viele wenden sich zuerst an einen Patentanwalt, obwohl sie in Uni oder Firma eine Meldepflicht haben. <strong>Richtig:</strong> Erst intern melden, dann mit Fachleuten die Strategie klären.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="wizard-step" data-step="2">
+      <p class="wizard-step-label">Schritt 2</p>
+      <h2 class="wizard-step-title">Zeitfenster beachten</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Ziel</span>
+        <p>Eine Checkliste – was du vor einer Veröffentlichung klären oder tun musst.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Publication trap</h3>
+        <p>Die größte Gefahr: <strong>Veröffentlichen vor der Patentanmeldung</strong>. Sobald die Erfindung öffentlich ist, kann sie in den meisten Ländern nicht mehr patentiert werden.</p>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Situation</th><th>Risiko</th></tr>
+            <tr><td>Paper einreichen, Poster präsentieren, Demo zeigen</td><td>Öffentlichkeitsbegründung – Patentanspruch oft verloren</td></tr>
+            <tr><td>Gespräch mit Investor:innen ohne NDA</td><td>Kann als Veröffentlichung zählen</td></tr>
+            <tr><td>Prototyp auf Messe ausstellen</td><td>Öffentlichkeitsbegründung</td></tr>
+          </table>
+        </div>
+        <p><strong>Regel:</strong> Bevor du irgendetwas öffentlich machst – Meldung und ggf. Patentanmeldung prüfen.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Deine Checkliste</h3>
+        <ul>
+          <li>Habe ich meine Erfindung gemeldet (falls Meldepflicht)?</li>
+          <li>Steht eine Veröffentlichung an (Paper, Poster, Demo, Messe)?</li>
+          <li>Wenn ja: Ist die Patentstrategie geklärt? Anmeldung vor Veröffentlichung?</li>
+        </ul>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <h3>Tipp</h3>
+        <p>Wenn du unsicher bist, ob etwas „öffentlich" ist – behandle es als öffentlich. Lieber zu früh melden und klären als zu spät.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="wizard-step" data-step="3">
+      <p class="wizard-step-label">Schritt 3</p>
+      <h2 class="wizard-step-title">Schutzstrategie wählen</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Ziel</span>
+        <p>Eine grobe Strategie – welche Option passt zu deiner Situation?</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Optionen im Vergleich</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Option</th><th>Vorteil</th><th>Nachteil</th><th>Wann sinnvoll?</th></tr>
+            <tr><td><strong>Patent</strong></td><td>Rechtlicher Schutz, Lizenzierung möglich</td><td>Kosten, Zeit, Offenlegung</td><td>Kommerzieller Wert, Wettbewerbsvorteil</td></tr>
+            <tr><td><strong>Publikation</strong></td><td>Sichtbarkeit, Prior Art für andere</td><td>Kein Schutz</td><td>Wissenschaftlicher Impact wichtiger</td></tr>
+            <tr><td><strong>Trade Secret</strong></td><td>Keine Offenlegung, keine Kosten</td><td>Kein Schutz bei Leak</td><td>Schwer nachvollziehbar (Know-how, Prozess)</td></tr>
+            <tr><td><strong>Kombination</strong></td><td>Flexibilität</td><td>Komplexer</td><td>Oft: Kern patentieren, Rand publizieren</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <h3>Tipp</h3>
+        <p><strong>Typische Fehlentscheidung:</strong> „Ich publiziere erst mal, Patent kommt später." – In den meisten Ländern ist nach der Publikation kein Patent mehr möglich. <strong>Reihenfolge:</strong> Erst Strategie klären, dann handeln.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="wizard-step" data-step="4">
+      <p class="wizard-step-label">Schritt 4</p>
+      <h2 class="wizard-step-title">Prioritäten setzen</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Ziel</span>
+        <p>Eine priorisierte To-do-Liste – was du in welcher Reihenfolge tun solltest.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Standard-Reihenfolge</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Priorität</th><th>Schritt</th><th>Warum?</th></tr>
+            <tr><td>1</td><td><strong>Meldung</strong> (falls Meldepflicht)</td><td>Rechtlich erforderlich</td></tr>
+            <tr><td>2</td><td><strong>Beratung</strong> (TTO, Patentstelle, Vorgesetzte)</td><td>Strategie klären, bevor du handelst</td></tr>
+            <tr><td>3</td><td><strong>Strategie finalisieren</strong></td><td>Patent ja/nein? Wann? Wo?</td></tr>
+            <tr><td>4</td><td><strong>Anmeldung</strong> (falls Patent)</td><td>Vor jeder Veröffentlichung</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <h3>Tipp</h3>
+        <p><strong>Reihenfolge-Fehler:</strong> Viele wollen zuerst „alles recherchieren" oder „die Erfindung perfektionieren". Besser: <strong>Zuerst melden und beraten</strong>, dann in Ruhe entscheiden.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="wizard-step" data-step="5">
+      <p class="wizard-step-label">Schritt 5</p>
+      <h2 class="wizard-step-title">Ergebnis</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Ziel</span>
+        <p>Eine klare Next Action und die Entscheidung, wann du eine:n Patentanwalt:in oder andere Fachperson einbeziehst.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Nächste Aktion ableiten</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Situation</th><th>Nächste Aktion</th></tr>
+            <tr><td><strong>Meldepflicht, noch nicht gemeldet</strong></td><td>Sofort melden (TTO, Patentstelle, Vorgesetzte)</td></tr>
+            <tr><td><strong>Veröffentlichung geplant</strong></td><td>Vorher Strategie klären; bei Patent: Anmeldung vor Veröffentlichung</td></tr>
+            <tr><td><strong>Strategie unklar</strong></td><td>Erstgespräch mit Ansprechpartner:in vereinbaren</td></tr>
+            <tr><td><strong>Patent geplant</strong></td><td>Beratung zur Anmeldung (Patentanwalt, TTO)</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Wann Patentanwalt einbeziehen?</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Wann?</th><th>Warum?</th></tr>
+            <tr><td><strong>Vor Anmeldung</strong></td><td>Formulierung, Länderauswahl, Strategie</td></tr>
+            <tr><td><strong>Bei Konflikten</strong></td><td>z.B. Ownership, Meldepflicht verletzt</td></tr>
+            <tr><td><strong>Bei Unsicherheit</strong></td><td>Lieber früh ein kurzes Gespräch als spät einen teuren Fehler</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>So geht's weiter</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Option</th><th>Wann?</th></tr>
+            <tr><td><strong>Patentierbarkeit prüfen</strong></td><td>Wenn du noch unsicher bist – siehe Erfindung-Check</td></tr>
+            <tr><td><strong>Patentierungsprozess vertiefen</strong></td><td>Wenn du mehr Details zum Ablauf einer Anmeldung brauchst</td></tr>
+            <tr><td><strong>Erfindung dokumentieren</strong></td><td>Wenn du deine Kernidee sauber festhalten willst, bevor du handelst</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../../../shared/design-templates/step-wizard/step-wizard.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof initStepWizard === 'function') {
+      initStepWizard(document.getElementById('wizard'), { startAt: 0 });
+    }
+  });
+</script>
+</body>
+</html>

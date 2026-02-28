@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Step Wizard Template</title>
+  <link rel="stylesheet" href="step-wizard.css">
+</head>
+<body>
+
+<div class="wizard-app" id="wizard">
+  <div class="wizard-container">
+    <header style="margin-bottom: 1.5rem;">
+      <h1 style="font-size: 1.5rem; font-weight: 600; margin: 0;">Dein Prozess</h1>
+      <p style="font-size: 1rem; color: #666; margin: 0.25rem 0 0;">Schritt für Schritt</p>
+    </header>
+
+    <div class="wizard-progress">
+      <div class="wizard-progress-bar">
+        <div class="wizard-progress-fill"></div>
+      </div>
+      <span class="wizard-progress-text">Schritt 1 von 3</span>
+    </div>
+
+    <div class="wizard-step active" data-step="0">
+      <p class="wizard-step-label">Schritt 1</p>
+      <h2 class="wizard-step-title">Start</h2>
+      <div class="wizard-block">
+        <p>Inhalt deines ersten Schritts.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="1">
+      <p class="wizard-step-label">Schritt 2</p>
+      <h2 class="wizard-step-title">Mitte</h2>
+      <div class="wizard-block wizard-block-dark">
+        <h3>Wichtiger Block</h3>
+        <p>Dark blocks für hervorgehobene Inhalte.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="2">
+      <p class="wizard-step-label">Schritt 3</p>
+      <h2 class="wizard-step-title">Ende</h2>
+      <div class="wizard-block">
+        <p>Letzter Schritt – nur Zurück-Button.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="step-wizard.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    initStepWizard(document.getElementById('wizard'), { startAt: 0 });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Generated deploy output (push to separate GitHub Pages repo)
+deploy/
+
+# Environment and secrets
+.env
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc

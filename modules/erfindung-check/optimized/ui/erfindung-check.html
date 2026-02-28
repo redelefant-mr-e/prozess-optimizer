@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erfindung-Check: Schritt für Schritt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../shared/design-templates/step-wizard/step-wizard.css">
+  <style>
+    /* Module-specific: tooltip and details (erfindung-check only) */
+    .tooltip-wrap { position: relative; display: inline; }
+    .tooltip-wrap .tooltip-text {
+      visibility: hidden; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      background: #333; color: #fff; padding: 0.5rem 0.75rem; border-radius: 4px;
+      font-size: 0.85rem; max-width: 260px; width: max-content; z-index: 10; margin-top: 0.5rem;
+    }
+    .tooltip-wrap:hover .tooltip-text { visibility: visible; }
+    details summary { cursor: pointer; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<div class="wizard-app" id="wizard">
+  <div class="wizard-container">
+    <header style="margin-bottom: 1rem;">
+      <nav class="breadcrumb">
+        <a href="../../../../index.html">Übersicht</a><span> · </span><span class="active">V1</span><span> · </span><a href="../../../../V2-HTML/index.html">V2</a>
+      </nav>
+      <p style="margin: 0 0 0.5rem;"><a href="../../../../v1-index.html" class="wizard-back-link">← Zurück zu V1</a></p>
+      <h1 style="margin: 0 0 0.25rem;">Erfindung-Check</h1>
+      <p class="wizard-subtitle" style="margin: 0;">Prüfe, ob deine Idee neu ist – Schritt für Schritt</p>
+    </header>
+
+    <div class="wizard-stepper" id="stepper">
+      <span data-stepper="0">Einleitung</span>
+      <span data-stepper="1">Kategorie</span>
+      <span data-stepper="2">Markt</span>
+      <span data-stepper="3">Prior Art</span>
+      <span data-stepper="4">Treffer</span>
+      <span data-stepper="5">Kern</span>
+      <span data-stepper="6">Ergebnis</span>
+    </div>
+
+    <div class="wizard-progress">
+      <div class="wizard-progress-bar">
+        <div class="wizard-progress-fill" style="width: 14%;"></div>
+      </div>
+      <span class="wizard-progress-text">Schritt 1 von 7</span>
+    </div>
+
+    <!-- Step 0 -->
+    <div class="wizard-step active" data-step="0">
+      <p class="wizard-step-label">Schritt 0</p>
+      <h2 class="wizard-step-title">Einleitung</h2>
+      
+      <div class="wizard-block wizard-block-info">
+        <h3>Was ist eine Erfindung?</h3>
+        <p>Eine Erfindung ist eine <strong>neue, konkrete Lösung</strong> für ein spezifisches Problem, die so beschrieben werden kann, dass andere sie nachbauen können.</p>
+        <div class="wizard-block limitations" style="margin-top: 1rem;">
+          <h3>Wichtige Grenze dieses Checks</h3>
+          <ul>
+            <li>Dies ist <strong>keine</strong> vollständige Patentrecherche.</li>
+            <li>Ergebnis = <strong>erste Einschätzung</strong>, keine rechtliche Sicherheit.</li>
+            <li>Vor Veröffentlichung/Investitionen: immer Fachperson (Patentanwalt, Patentstelle) einbeziehen.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Warum dieser Check?</h3>
+        <p>Viele gute Ideen scheitern nicht, weil sie schlecht sind, sondern weil man <strong>zu spät klärt</strong>, wie neu sie wirklich sind:</p>
+        <ul>
+          <li>Gibt es schon etwas Ähnliches?</li>
+          <li>Ist dein Ansatz klar abgrenzbar?</li>
+          <li>Was bedeutet das für die nächsten Schritte?</li>
+        </ul>
+        <p>Dieser Check hilft dir, genau das <strong>strukturiert zu prüfen</strong>.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Warum jetzt und nicht später?</h3>
+        <ul>
+          <li><strong>Du investierst Monate in Prototypen</strong>, obwohl es schon ein Patent gibt.</li>
+          <li><strong>Du präsentierst öffentlich</strong> und nimmst dir damit selbst Schutzmöglichkeiten.</li>
+          <li><strong>Du verlierst Zeit</strong>, weil du nicht früh genug pivotierst.</li>
+        </ul>
+        <p>Mit diesem Check hast du in <strong>1–2 Abenden</strong> eine erste, belastbare Einschätzung.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Kurzes Glossar (optional)</h3>
+        <details>
+          <summary>Glossar einblenden</summary>
+          <ul style="margin-top: 0.5rem;">
+            <li><strong>Prior Art:</strong> Alles, was vor deiner Idee schon öffentlich beschrieben oder geschützt wurde (Produkte, Patente, Publikationen).</li>
+            <li><strong>Funktionsprinzip:</strong> Was technisch passiert, damit die gewünschte Wirkung entsteht (z.B. „Hebel drückt Klemmbacken zusammen").</li>
+            <li><strong>Mechanismus:</strong> Die konkrete Anordnung und Bewegung von Teilen, die das Funktionsprinzip umsetzt.</li>
+            <li><strong>Kontext:</strong> Umgebung und Einsatzsituation deiner Lösung (z.B. Fahrradlenker, Labor, Software-Backend).</li>
+            <li><strong>Kernprinzip / Kernidee:</strong> Der eine technische Grundgedanke, ohne den deine Lösung nicht funktionieren würde.</li>
+            <li><strong>Patentanspruch (Claim):</strong> Der Teil eines Patents, der beschreibt, was genau geschützt sein soll.</li>
+            <li><strong>Variante:</strong> Eine technische Abwandlung deiner Kernidee (z.B. anderer Hebel, zusätzlicher Riegel), die das Grundprinzip beibehält.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <h3>Beispiel durch den Prozess</h3>
+        <p>In den folgenden Schritten siehst du ein durchgängiges Beispiel: <strong>Einhand-Schnellspannzwinge für Fahrradlenker</strong> – eine Zwinge, die mit einer Hand bedient werden kann und am Lenker befestigt wird.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Dein erster Schritt</span>
+        <p style="margin: 0;">Klicke auf <strong>Weiter</strong>, um mit Schritt 1 (Kategorie wählen) zu starten.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="wizard-step" data-step="1">
+      <p class="wizard-step-label">Schritt 1</p>
+      <h2 class="wizard-step-title">Kategorie wählen</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <h3>Wähle die passende Kategorie für deine Idee</h3>
+        <ol>
+          <li><strong>Frage dich:</strong> Wo steckt die Neuheit? Physischer Aufbau, Material/Prozess, digitale Logik oder medizinisch-diagnostischer Kontext?</li>
+          <li><strong>Wähle</strong> aus der Tabelle unten die passende Kategorie.</li>
+          <li><strong>Bei Mischung:</strong> Wähle die Kategorie, die dem <strong>Kern deiner Erfindung</strong> am nächsten ist.</li>
+        </ol>
+        <p><em>Am Ende hast du:</em> Eine Hauptkategorie + 1–2 Sätze, was daran neu sein soll.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Die Kategorien</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Kategorie</th><th>Wann wählen?</th><th>Beispiel</th></tr>
+            <tr><td><strong>Produkt, Gerät oder Mechanik</strong></td><td>Wenn es ein physisches Ding oder ein Mechanismus ist (Bauteil, Gerät, Konstruktion)</td><td>Neuer Verschluss, neues Ventil, neue Halterung, neue Mechanik</td></tr>
+            <tr><td><strong>Material, Chemie oder Verfahren</strong></td><td>Wenn Materialeigenschaften, Rezepturen, Beschichtungen oder ein Herstellprozess im Zentrum stehen</td><td>Neue Beschichtung, neue Mischung, neuer Prozessschritt</td></tr>
+            <tr><td><strong>Software, Algorithmus oder System</strong></td><td>Wenn die Lösung im Kern digital ist (Logik, Datenverarbeitung, Workflow, Modell)</td><td>Neue Matching-Logik, neue Pipeline, neues Steuerungssystem</td></tr>
+            <tr><td><strong>Medizin, Diagnostik oder Labor</strong></td><td>Wenn der Kern medizinisch oder diagnostisch ist, oft mit speziellen Begriffen und Quellen</td><td>Neuer Assay, neues Testverfahren, neue Probenaufbereitung</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Spezialhinweise pro Kategorie</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Kategorie</th><th>Hinweise</th></tr>
+            <tr><td><strong>Medizin</strong></td><td>Nutze PubMed und Fachjournale; Produktseiten sind weniger aussagekräftig. Suche nach „assay", „diagnostic method", „biomarker" etc.</td></tr>
+            <tr><td><strong>Verfahren/Chemie</strong></td><td>Achte auf Begriffe wie „method for…", „process for…". Patente + Papers sind wichtiger als Shop-Seiten.</td></tr>
+            <tr><td><strong>Software</strong></td><td>GitHub, Papers, Blogposts – „workflow" und „pipeline" statt „device".</td></tr>
+            <tr><td><strong>Mechanik</strong></td><td>Produktseiten, Patentskizzen, „mechanism"-Suche.</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>Kategorie-Zuordnung</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Erfindung</th><th>Gewählte Kategorie</th><th>Begründung</th></tr>
+            <tr><td>Einhand-Schnellspannzwinge für Fahrradlenker</td><td><strong>Produkt, Gerät oder Mechanik</strong></td><td>Physischer Mechanismus (Schnellspann), Bauteil für Fahrrad</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <ul>
+          <li>Gewählte Hauptkategorie (Mechanik / Verfahren / Software / Medizin)</li>
+          <li>1–2 Sätze, was an deiner Idee <strong>physisch / prozessual / logisch</strong> neu sein soll</li>
+        </ul>
+        <h3>Wenn du hier festhängst</h3>
+        <p>Wähle die Kategorie, die dem <strong>Hauptnutzen</strong> deiner Idee am nächsten ist – du kannst später verfeinern.</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="wizard-step" data-step="2">
+      <p class="wizard-step-label">Schritt 2</p>
+      <h2 class="wizard-step-title">Markt scannen</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <h3>So gehst du vor</h3>
+        <p>Produkte, Demos und Anbieter liefern die <strong>schnellste Einordnung</strong> und die <strong>besten Suchbegriffe</strong>.</p>
+        <ol>
+          <li><strong>Öffne</strong> maximal 3 Suchorte: Google (Web), YouTube, 1 großer Shop (z.B. Amazon oder Fachshop deiner Branche).</li>
+          <li><strong>Nutze</strong> diese Suchmuster (an deine Idee anpassen): <code>"Schnellspannzwinge Fahrradlenker"</code>, <code>"quick release clamp handlebar"</code>, <code>"one hand quick release bike clamp"</code>.</li>
+          <li><strong>Notiere</strong> pro Treffer: <strong>anders</strong> / <strong>ähnlich</strong> / <strong>sehr ähnlich</strong> / <strong>praktisch gleich</strong> (ein Satz reicht).</li>
+        </ol>
+        <p><em>Am Ende hast du:</em> Liste mit 5–10 Produkten/Lösungen + Markierung + verwendete Begriffe (Deutsch/Englisch).</p>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <h3>Wenn du wenig Zeit hast</h3>
+        <p>Mindestens <strong>3 Treffer</strong>, 1 Satz pro Treffer. Das reicht für eine erste Orientierung.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>Markt-Treffer bewertet</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Treffer</th><th>Ähnlichkeit</th><th>Beschreibung</th><th>Kommentar</th></tr>
+            <tr><td>QuickClamp Co.</td><td>ähnlich</td><td>Bietet Schnellspannzwingen für Werkzeuge an.</td><td>Gleicher Mechanismus, anderer Anwendungsfall. Prüfe, ob dein Lenker-Kontext einen Unterschied macht.</td></tr>
+            <tr><td>BikeGear Innovations</td><td>sehr ähnlich</td><td>Produziert Fahrradlenkerklemmen mit Schnellspannmechanismus.</td><td>Gleiche Anwendung (Lenker), ähnlicher Schnellspannhebel. Prüfe genau, ob dein Hebel nur eine Variante oder ein anderes Prinzip ist.</td></tr>
+            <tr><td>ClampMaster</td><td>anders</td><td>Fertigt traditionelle Schraubzwingen für Fahrräder.</td><td>Anderer Mechanismus (Schraube statt Schnellspann). Gut abgrenzbar.</td></tr>
+            <tr><td>Handlebar Tech</td><td>sehr ähnlich</td><td>Spezialisiert auf Fahrradlenkerzubehör mit Schnellverschluss.</td><td>Sehr nah dran – genau prüfen, was technisch anders ist.</td></tr>
+          </table>
+        </div>
+        <p><strong>Keywords:</strong> Schnellspannzwinge, Fahrradlenker, Einhandbedienung, quick release clamp, handlebar mount</p>
+      </div>
+
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <ul>
+          <li>Liste mit 5–10 Produkten/Lösungen</li>
+          <li>Markierung: ähnlich / sehr ähnlich / anders</li>
+          <li>Liste der verwendeten Begriffe (Deutsch/Englisch)</li>
+        </ul>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="wizard-step" data-step="3">
+      <p class="wizard-step-label">Schritt 3</p>
+      <h2 class="wizard-step-title"><span class="tooltip-wrap">Prior Art<span class="tooltip-text">Prior Art = alles, was vor deiner Idee schon veröffentlicht oder patentiert wurde.</span></span> suchen</h2>
+      
+      <div class="wizard-block wizard-block-info">
+        <h3>Prüfe, was bereits geschützt oder veröffentlicht ist</h3>
+        <p>Mit deinem Keyword-Set prüfst du jetzt, ob dein <strong><span class="tooltip-wrap">Kernprinzip<span class="tooltip-text">Kernprinzip = Der eine technische Grundgedanke, ohne den deine Lösung nicht funktionieren würde.</span></span></strong> bereits in Patenten oder Publikationen auftaucht.</p>
+        <p><strong>Ziel:</strong> Nicht alles lesen, sondern schnell erkennen, ob es sehr nahe Treffer gibt und was daran ähnlich ist.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <h3>So gehst du vor</h3>
+        <ol>
+          <li><strong>Wähle</strong> 1 Pflicht-Quelle: <a href="https://worldwide.espacenet.com/" target="_blank" rel="noopener">Espacenet</a> <strong>oder</strong> <a href="https://patents.google.com/" target="_blank" rel="noopener">Google Patents</a>. Optional: <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>, bei Medizin/Biotech: <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</li>
+          <li><strong>Starte</strong> mit genau 3 Suchanfragen. Pro Suchanfrage: Scrolle nur durch die <strong>ersten 20 Treffer</strong>. Speichere nur Treffer, bei denen Bild/Abstract <strong>wirklich</strong> nach deinem Prinzip aussehen.</li>
+          <li><strong>Prüfe</strong> Relevanz mit der Checkliste unten: Gleiches Objekt + ähnlicher Mechanismus? Dann relevant. Anderes Objekt, aber dein Mechanismus? Dann relevant. Gleicher Anwendungsfall, anderer Mechanismus? Dann eher „anders".</li>
+          <li><strong>Arbeite</strong> in drei Ebenen: Bilder/Skizzen (Mechanismus erkennbar?), Abstract (Funktionsprinzip passt?), Claims/Methodik (nur wenn nah – Kernprinzip beansprucht?).</li>
+        </ol>
+        <p><em>Am Ende hast du:</em> 5–10 relevante Patente/Publikationen, pro Treffer 1 Satz warum relevant, Markierung (mechanisch gleich / anderes Prinzip / unklar).</p>
+        <p><strong>Relevanz-Checkliste</strong></p>
+        <ul>
+          <li>Gleiches Objekt (z.B. Fahrradlenker) <strong>und</strong> ähnlicher Mechanismus? Dann: <strong>relevant</strong></li>
+          <li>Anderes Objekt, aber <strong>genau dein Mechanismus</strong>? Dann: <strong>relevant</strong></li>
+          <li>Gleicher Anwendungsfall, aber ganz anderer Mechanismus? Dann: eher <strong>„anders"</strong></li>
+        </ul>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Ebene</th><th>Frage</th></tr>
+            <tr><td><strong>Bilder und Skizzen</strong></td><td>Erkennst du denselben Mechanismus oder Aufbau?</td></tr>
+            <tr><td><strong>Abstract</strong></td><td>Passt das Funktionsprinzip und der Anwendungsfall?</td></tr>
+            <tr><td><strong><span class="tooltip-wrap">Claims<span class="tooltip-text">Claims = der Teil eines Patents, der genau beschreibt, was geschützt werden soll.</span></span>/Methodik</strong></td><td>Nur wenn es wirklich nah wirkt – prüfe, ob dein Kernprinzip beansprucht wird</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>So sieht ein Suchlauf konkret aus</h3>
+        <p>Nehmen wir die Einhand-Schnellspannzwinge für Fahrradlenker aus dem Beispiel.</p>
+        <ol>
+          <li><strong>Suchanfrage in Espacenet:</strong> Gib ein: <code>quick release clamp handlebar one hand</code>.</li>
+          <li><strong>Erster Treffer:</strong> Bild zeigt Klemme um Lenker mit seitlichem Hebel, sehr ähnlich. Abstract: „Quick-release clamp for bicycle handlebars, operable with one hand …" – Gleicher Anwendungsfall. <strong>Entscheidung: relevant</strong> – in Tabelle aufnehmen.</li>
+          <li><strong>Zweiter Treffer:</strong> Zwinge für Werkbänke mit Schnellspannhebel – anderer Anwendungsfall, aber ähnlicher Mechanismus. <strong>Entscheidung: relevant</strong> – Mechanismus interessant.</li>
+          <li><strong>Dritter Treffer:</strong> Schraubzwinge mit Drehgriff, kein Hebel – andere Mechanik. Abstract: „Screw clamp …" – keine Einhandbedienung. <strong>Entscheidung: nicht relevant</strong> – nicht aufnehmen.</li>
+        </ol>
+        <p>So arbeitest du dich durch die ersten 20 Treffer und speicherst nur die, bei denen Bild <strong>und</strong> Abstract wirklich nach deinem Prinzip aussehen.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <h3>Wenn du wenig Zeit hast</h3>
+        <p>Nur <strong>2 Datenbanken</strong> (Espacenet + Google Patents), <strong>3–5 relevante Treffer</strong>. Das reicht für eine erste Einschätzung.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <h3>Zu viele oder zu wenige Treffer?</h3>
+        <p><strong>Zu viele (z.B. 500+):</strong> Ausgangssuche <code>clamp</code> entspricht zu allgemein. Anpassung: <code>quick release clamp handlebar one hand</code> – ca. 30 Treffer, davon 5 relevant.</p>
+        <p><strong>Zu wenige (z.B. 0–2):</strong> Ausgangssuche zu spezifisch, 0 Treffer. Anpassung: erst <code>quick release clamp handlebar</code>, dann <code>quick release clamp</code> – erst 10, dann 80 Treffer, wieder mit Bild und Abstract filtern.</p>
+      </div>
+
+      <div class="wizard-block limitations">
+        <p><strong>Wichtige Grenze:</strong> Dies ist keine vollständige Patentrecherche. Vor Veröffentlichung oder Investitionen: immer Fachperson einbeziehen.</p>
+      </div>
+
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <ul>
+          <li>5–10 relevante Patente/Publikationen</li>
+          <li>Pro Treffer: 1 Satz, warum relevant</li>
+          <li>Markierung: mechanisch gleich / anderes Prinzip / unklar</li>
+        </ul>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="wizard-step" data-step="4">
+      <p class="wizard-step-label">Schritt 4</p>
+      <h2 class="wizard-step-title">Treffer bewerten</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <h3>Entscheidungsmatrix anwenden</h3>
+        <p>Führe deine Treffer aus <strong>Markt</strong>, <strong>Patenten</strong> und <strong>Publikationen</strong> zusammen und bewerte, wie nah sie an deinem <span class="tooltip-wrap">Kernprinzip<span class="tooltip-text">Kernprinzip = Der eine technische Grundgedanke, ohne den deine Lösung nicht funktionieren würde.</span></span> sind.</p>
+        <ol>
+          <li><strong>Nimm</strong> deine Treffer aus Markt + Patenten + Publikationen.</li>
+          <li><strong>Gehe</strong> jeden Treffer durch die 3 Fragen der Matrix unten (dieselbe Wirkung? derselbe Mechanismus? ähnliches Prinzip?).</li>
+          <li><strong>Trage</strong> Kategorie („anders" / „ähnlich" / „sehr ähnlich" / „praktisch gleich") + Kurzkommentar ein.</li>
+        </ol>
+        <p><em>Am Ende hast du:</em> Liste der 3–5 kritischsten Treffer mit Kurzbewertung + vorläufige Einschätzung (wo gleich, wo anders).</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Entscheidungsmatrix (<span class="tooltip-wrap">Funktionsprinzip<span class="tooltip-text">Funktionsprinzip = Was technisch passiert, damit die gewünschte Wirkung entsteht (z.B. „Hebel drückt Klemmbacken zusammen").</span></span>)</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Frage</th><th>Wenn „Ja"</th><th>Wenn „Nein"</th></tr>
+            <tr><td>Erreicht der Treffer <strong>dieselbe Wirkung</strong> (z.B. „Einhand-Schnellspannen am Lenker")?</td><td>weiter</td><td><strong>„anders"</strong></td></tr>
+            <tr><td>Nutzt er <strong>denselben Mechanismus</strong> (z.B. Hebel, Klemmbacken, Rastung)?</td><td><strong>„praktisch gleich"</strong></td><td>weiter</td></tr>
+            <tr><td>Nutzt er ein <strong>ähnliches Prinzip</strong> (z.B. Schnellspannen, aber mit Drehknopf statt Hebel)?</td><td><strong>„sehr ähnlich"</strong></td><td><strong>„ähnlich"</strong></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>So formulierst du konkret</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Vage</th><th>Konkret</th></tr>
+            <tr><td>„Meine Zwinge ist effizienter."</td><td>„Meine Zwinge braucht nur einen Hebelzug statt 3 Drehbewegungen."</td></tr>
+            <tr><td>„Der Mechanismus ist anders."</td><td>„Statt einer Schraubklemmung nutze ich eine Rasthebel-Klemmung."</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <h3>Wenn du wenig Zeit hast</h3>
+        <p>Nur die <strong>3–5 nächstliegenden Treffer</strong> bewerten. Das reicht für eine erste Einordnung.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>Einen Treffer durch die Matrix führen</h3>
+        <p><strong>Beispiel-Treffer: BikeGear Innovations – Schnellspannklemme für Fahrradlenker</strong></p>
+        <ol>
+          <li><strong>Frage 1:</strong> Erreicht der Treffer dieselbe Wirkung? Deine Erfindung: „Einhand-Schnellspannen am Fahrradlenker". BikeGear: Klemme mit Hebel am Lenker, eine Hand. Dann: <strong>Ja</strong>, weiter.</li>
+          <li><strong>Frage 2:</strong> Nutzt er denselben Mechanismus? Skizze zeigt seitlichen Hebel mit Exzenter, zwei Klemmbacken. Deine Idee: ebenfalls Hebel mit Exzenter, leicht andere Hebelgeometrie. Dann: <strong>Ja, im Kern derselbe Mechanismus</strong>. Kategorie: <strong>„praktisch gleich"</strong>.</li>
+          <li><strong>In die Tabelle eintragen:</strong> Kategorie „praktisch gleich", Kurzkommentar: „Gleiche Wirkung und im Kern derselbe Hebel-Exzenter-Mechanismus; Unterschiede nur in der Hebelform."</li>
+        </ol>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>Beispiel-Tabelle</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Treffer</th><th>Quelle</th><th>Kategorie</th><th>Gleich</th><th>Anders</th><th>Kommentar</th></tr>
+            <tr><td>BikeGear Innovations (Beispiel)</td><td>Markt</td><td>praktisch gleich</td><td>Gleiche Wirkung (Einhand-Schnellspannen am Lenker) und im Kern derselbe Hebel-Exzenter-Mechanismus.</td><td>Unterschiede nur in der Hebelform.</td><td>Beispiel: So führst du einen Treffer durch die Matrix.</td></tr>
+            <tr><td>QuickClamp Co.</td><td>Markt</td><td>Ähnlicher Mechanismus, anderer Zweck</td><td>Verwendet Schnellspannmechanismus.</td><td>Keine Anwendung für Fahrradlenker.</td><td>Könnte als Inspiration dienen.</td></tr>
+            <tr><td>BikeGear Innovations</td><td>Markt</td><td>Gleiche Funktion und gleicher Mechanismus</td><td>Fokussiert auf Fahrradlenkerklemmen.</td><td>Verwendet andere Materialien.</td><td>Direkte Konkurrenz – Kernprinzip gleich.</td></tr>
+            <tr><td>Schnellspannmechanismus für Fahrräder</td><td>Patent</td><td>Gleiche Funktion und gleicher Mechanismus</td><td>Beschreibt Schnellspannmechanismus für Fahrräder.</td><td>Unterschiedliche technische Details.</td><td>Patent könnte bestehende Idee blockieren.</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <ul>
+          <li>Liste der 3–5 <strong>kritischsten</strong> Treffer mit Kurzbewertung (Funktionsprinzip)</li>
+          <li>Deine vorläufige Einschätzung: Wo bist du <strong>gleich</strong>, wo <strong>anders</strong>?</li>
+        </ul>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="wizard-step" data-step="5">
+      <p class="wizard-step-label">Schritt 5</p>
+      <h2 class="wizard-step-title">Kern schärfen</h2>
+      
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <h3>Formuliere deine Kernidee</h3>
+        <p>Leite aus deiner Bewertung (Schritt 4) die <strong><span class="tooltip-wrap">Kernidee<span class="tooltip-text">Kernidee = Der eine technische Grundgedanke, ohne den deine Lösung nicht funktionieren würde.</span></span></strong> ab und bringe sie in eine klare, prüfbare Form.</p>
+        <ol>
+          <li><strong>Nutze</strong> das Muster unten (Blockquote).</li>
+          <li><strong>Fülle</strong> die Platzhalter: [Mechanismus/Struktur], [Wirkung/Vorteil], [Bedingung/Kontext].</li>
+          <li><strong>Vermeide</strong> vage Begriffe („besser", „effizienter") – zwinge sie in <strong>Mechanik</strong>: Was ist konkret anders aufgebaut?</li>
+        </ol>
+        <p><em>Am Ende hast du:</em> Kernidee in 1 Satz + optional Varianten + Liste der 3–5 kritischsten Treffer.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Muster für Kernidee</h3>
+        <blockquote>„Neu ist, dass [<span class="tooltip-wrap">Mechanismus<span class="tooltip-text">Mechanismus = Die konkrete Anordnung und Bewegung von Teilen, die das Funktionsprinzip umsetzt (z.B. Hebel, Exzenter, Klemmbacken).</span></span>/Struktur] so ausgeführt ist, dass [Wirkung/Vorteil] unter [Bedingung/<span class="tooltip-wrap">Kontext<span class="tooltip-text">Kontext = Umgebung und Einsatzsituation deiner Lösung (z.B. Fahrradlenker, Labor, Software-Backend).</span></span>] entsteht."</blockquote>
+        <h3>Varianten-Kommentare (Beispiel-Denkmuster)</h3>
+        <ul>
+          <li><strong>Variante A – zusätzlicher Sicherheitsverschluss:</strong> Kann als naheliegende Ergänzung betrachtet werden – <strong>nicht automatisch neu</strong>, nur weil ein Riegel dazukommt.</li>
+          <li><strong>Variante B – verstellbare Spannkraft:</strong> Kann technische Variante sein – ohne Anspruchsanalyse <strong>unklar</strong>, ob sie außerhalb des bestehenden Patents liegt.</li>
+        </ul>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>Kernidee (mechanikfokussiert)</h3>
+        <p><em>Neu ist, dass</em> der Schnellspannhebel der Lenkerklemme über einen <strong>zweistufigen Rastmechanismus</strong> mit definierter Zwischenposition geführt wird:</p>
+        <ul>
+          <li>In einer <strong>ersten Rastposition</strong> liegen die Klemmbacken lose am Lenker an, sodass sich die Klemme mit einer Hand entlang des Lenkers verschieben lässt.</li>
+          <li>In der <strong>zweiten Rastposition</strong> wird über einen Exzenter und eine veränderte Hebelgeometrie eine höhere Klemmkraft erzeugt.</li>
+          <li>Die Lagerpunkte des Hebels sind so angeordnet, dass sich der Hebelweg auf maximal 60° beschränkt und mit einem Daumen bedient werden kann.</li>
+        </ul>
+        <p>Der Kern liegt im <strong>spezifischen Zusammenspiel aus Hebelgeometrie, Exzenter und zweistufiger Rastung</strong>, nicht in „komfortabel" oder „bei jedem Wetter".</p>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <h3>Wenn du wenig Zeit hast</h3>
+        <p>Nur die <strong>3–5 nächstliegenden Treffer</strong> als Basis – Kernidee in 1 Satz formulieren, Varianten weglassen.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <h3>Vage Begriffe vermeiden</h3>
+        <p>Wenn deine Kernidee zu allgemein klingt („besser", „effizienter", „smarter"), zwinge sie in <strong>Mechanik</strong>: Was ist konkret anders aufgebaut, anders angeordnet oder anders umgesetzt, sodass der Effekt entsteht?</p>
+      </div>
+
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <ul>
+          <li>Deine Kernidee (1 Satz) + Varianten</li>
+          <li>Liste der 3–5 kritischsten Treffer mit Kurzbewertung</li>
+        </ul>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="wizard-step" data-step="6">
+      <p class="wizard-step-label">Schritt 6</p>
+      <h2 class="wizard-step-title">Ergebnis ableiten</h2>
+      
+      <div class="wizard-block limitations">
+        <p><strong>Wichtige Grenze:</strong> Dies ist keine vollständige Patentrecherche. Ergebnis = erste Einschätzung. Vor Veröffentlichung oder Investitionen: immer Fachperson einbeziehen.</p>
+      </div>
+
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <h3>Triff eine klare Einordnung</h3>
+        <p>Du hast Markt-, Patent- und Publikations-Treffer bewertet und deine Kernidee formuliert. Leite daraus eine <strong>klare erste Entscheidung</strong> ab.</p>
+        <ol>
+          <li><strong>Vergleiche</strong> deine Bewertung mit der Tabelle unten (Neu plausibel? Unklar? Eher bekannt?).</li>
+          <li><strong>Wähle</strong> den passenden Status für deine Situation.</li>
+          <li><strong>Folge</strong> der nächsten Aktion aus der Tabelle.</li>
+        </ol>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Einordnung &amp; nächste Aktion</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Status</th><th>Nächste Aktion</th></tr>
+            <tr><td><strong>Neu, wirkt plausibel?</strong></td><td>Dokumentiere sauber (Skizze, Funktionsprinzip, Varianten) und bleib vertraulich, bis du weißt, ob Schutz sinnvoll ist</td></tr>
+            <tr><td><strong>Unklar?</strong></td><td>Schärfe die Abgrenzung (Kernidee präzisieren), erweitere Keywords/Synonyme und mache eine zweite Suchrunde</td></tr>
+            <tr><td><strong>Eher bekannt?</strong></td><td>Prüfe einen Pivot: anderer Mechanismus, anderer Use-Case, neue Kombination oder zusätzlicher Schritt, der den Unterschied macht</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <h3>Einordnung: Unklar</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Einordnung</th><th>Begründung</th><th>Nächste Aktion</th></tr>
+            <tr><td><strong>Unklar</strong></td><td>Es gibt ein Patent mit sehr ähnlichem Schnellspann-Prinzip für Fahrradlenker. Meine Kernidee (zweistufiger Rastmechanismus, Hebelgeometrie) unterscheidet sich mechanisch, aber ein bestehendes Patent könnte solche Varianten mit abdecken. Die Abgrenzung ist noch nicht sauber geprüft.</td><td>Schärfe die Abgrenzung: Fokus auf den zweistufigen Rastmechanismus. Prüfe, ob BikeGear und das Patent diesen Aspekt abdecken. Zweite Suchrunde mit Keywords: two-stage latch, ratchet mechanism, quick-release.</td></tr>
+          </table>
+        </div>
+        <p><strong>Wichtiger Hinweis:</strong> Auch wenn sich die Kernidee auf einen speziellen zweistufigen Rastmechanismus stützt, kann ein bestehendes Patent <strong>auch solche Varianten mit abdecken</strong>. Deshalb ordnen wir das Beispiel als <strong>„unklar"</strong> ein – nicht als „sicher neu".</p>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>Was du aus dem Beispiel lernen kannst</h3>
+        <ul>
+          <li>Ein sehr ähnliches Patent führt oft zu <strong>„unklar"</strong>, nicht zu „neu".</li>
+          <li>Kleine mechanische Unterschiede reichen selten für „neu".</li>
+          <li>Marktprodukte liefern gute Suchbegriffe für Patente.</li>
+          <li>Die Einordnung muss <strong>logisch aus der Bewertung</strong> folgen – wenn du „praktisch gleich" hast, wird es selten „neu".</li>
+        </ul>
+      </div>
+
+      <div class="wizard-block wizard-block-info">
+        <h3>So geht's weiter</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tr><th>Option</th><th>Wann?</th></tr>
+            <tr><td><strong>Patentierbarkeit weiter prüfen</strong></td><td>Wenn dein Status unklar ist oder du noch mehr Sicherheit willst</td></tr>
+            <tr><td><strong>Patentierungsprozess verstehen</strong></td><td>Wenn dein Status neu wirkt plausibel (oder du bald veröffentlichen musst)</td></tr>
+            <tr><td><strong>Deine Erfindung sauber beschreiben</strong></td><td>Wenn du deine Kernidee weitergeben, intern melden oder mit Profis besprechen willst</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../../../shared/design-templates/step-wizard/step-wizard.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var wizard = document.getElementById('wizard');
+    var stepper = document.getElementById('stepper');
+    if (typeof initStepWizard === 'function') {
+      function updateStepper(step) {
+        if (!stepper) return;
+        var spans = stepper.querySelectorAll('[data-stepper]');
+        spans.forEach(function(s) {
+          var i = parseInt(s.getAttribute('data-stepper'), 10);
+          s.classList.remove('active', 'done');
+          if (i === step) s.classList.add('active');
+          else if (i < step) s.classList.add('done');
+        });
+      }
+      initStepWizard(wizard, {
+        startAt: 0,
+        onStepChange: function(index) { updateStepper(index); }
+      });
+    }
+  });
+</script>
+</body>
+</html>

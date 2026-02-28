@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prozess-Optimizer – Erfindung, Patent, Beschreibung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared/design-templates/step-wizard/step-wizard.css">
+  <style>
+    .landing-tiles { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+    .landing-tile {
+      padding: 1.5rem;
+      border-radius: var(--wizard-radius);
+      background: var(--wizard-card);
+      box-shadow: var(--wizard-shadow);
+      border: 1px solid var(--wizard-border);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .landing-tile:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: var(--wizard-accent-orange);
+    }
+    .landing-tile h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+    .landing-tile p { margin: 0; color: var(--wizard-text-muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="wizard-app">
+    <div class="wizard-container">
+      <header style="margin-bottom: 1rem;">
+        <h1 style="margin: 0 0 0.25rem;">Prozess-Optimizer</h1>
+        <p class="wizard-subtitle" style="margin: 0;">Guides für Erfindung, Patentierung und Erfindungsbeschreibung</p>
+      </header>
+
+      <p style="margin-bottom: 0.5rem; color: var(--wizard-text-muted);">Wähle eine Version:</p>
+      <div class="landing-tiles">
+        <a href="v1-index.html" class="landing-tile">
+          <h2>V1 Guides</h2>
+          <p>Was ist eine Erfindung? · Patentierungsprozess · Erfindungsbeschreibung</p>
+        </a>
+        <a href="V2-HTML/index.html" class="landing-tile">
+          <h2>V2 Guides</h2>
+          <p>Kundenüberarbeitete Prozesse – Was ist eine Erfindung? · Erfindungsbeschreibung · Patentierungsprozess</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

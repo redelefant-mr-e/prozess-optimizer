@@ -1,0 +1,25 @@
+# Schritt 0: Einleitung
+
+## Was ist eine Erfindung?
+
+Eine Erfindung ist eine **neue, konkrete Lösung** für ein konkretes Problem, die man so beschreiben kann, dass andere sie grundsätzlich nachbauen oder umsetzen könnten.
+
+---
+
+## Warum dieser Check?
+
+Viele gute Ideen scheitern nicht daran, dass sie schlecht sind, sondern daran, dass man **zu spät klärt**, wie neu sie wirklich sind:
+
+- Gibt es schon etwas Ähnliches?
+- Ist dein Ansatz klar abgrenzbar?
+- Was bedeutet das für die nächsten Schritte?
+
+Dieser Check hilft dir, genau das **strukturiert zu prüfen**. Du suchst gezielt nach ähnlichen Produkten, Patenten und Veröffentlichungen, bewertest die Nähe der Treffer und bekommst am Ende eine erste, praktische Einordnung, ob es sich eher nach **„neu“**, **„unklar“** oder **„bereits bekannt“** anfühlt.
+
+---
+
+## Nächster Schritt
+
+Folge den nächsten Schritten, um deine Idee zu prüfen und daraus eine klare nächste Aktion abzuleiten.
+
+**→ [Jetzt mit Schritt 1 starten →](01-Kategorie-waehlen.md)**

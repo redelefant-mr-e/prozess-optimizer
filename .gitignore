@@ -10,3 +10,47 @@ deploy/
 # Python
 __pycache__/
 *.pyc
+
+# Not needed for HTML – keep locally only
+archive/
+figma-import/
+V2-Export/
+V2 Änderungen/
+Beispiele für Erfindungsmeldungen Formulare/
+Erfindung-Check-Prozess/
+scripts/
+requirements.txt
+shared/design-templates/step-wizard/template.html
+modules/erfindung-check/Export/
+modules/erfindung-check/process/
+modules/erfindung-check/process-docs/
+modules/erfindung-check/examples/
+modules/erfindung-check/assets/
+modules/erfindung-check/scripts/
+modules/erfindung-check/optimized/steps/
+modules/erfindung-check/optimized/draft/
+modules/erfindung-check/optimized/refined/
+modules/erfindung-check/optimized/refined-V2/
+modules/erfindung-check/optimized/refined-V3/
+modules/erfindung-check/optimized/refined-V4/
+modules/erfindungsbeschreibung/Export/
+modules/erfindungsbeschreibung/process/
+modules/erfindungsbeschreibung/process-docs/
+modules/erfindungsbeschreibung/examples/
+modules/erfindungsbeschreibung/scripts/
+modules/patent-next-steps/Export/
+modules/patent-next-steps/process/
+modules/patent-next-steps/process-docs/
+modules/patent-next-steps/scripts/
+modules/patent-next-steps/optimized/draft/
+modules/patent-next-steps/optimized/refined/
+modules/patent-next-steps/optimized/refined-V2/
+modules/patent-next-steps/optimized/refined-V3/
+modules/patent-next-steps/optimized/refined-V4/
+modules/patent-next-steps/optimized/steps/
+modules/patent-next-steps/optimized/phase1_raw.md
+modules/patent-next-steps/optimized/phase2_raw.md
+modules/patent-next-steps/optimized/OPTIMIZATION-LOG.md
+modules/patent-next-steps/optimized/ui/patent-next-steps.html
+modules/patent-next-steps/optimized/ui/patent-next-steps-V2.html
+modules/patent-next-steps/optimized/ui/patent-next-steps-V3.html

@@ -29,6 +29,8 @@ function initStepWizard(container, options) {
     }
 
     onStepChange(index, total);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   container.addEventListener('click', function(e) {

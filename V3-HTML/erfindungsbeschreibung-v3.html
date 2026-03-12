@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erfindungsbeschreibung (V3)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/design-templates/step-wizard/step-wizard.css">
+</head>
+<body>
+
+<div class="wizard-app" id="wizard">
+  <div class="wizard-container">
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Übersicht</a><span> · </span><a href="../V2-HTML/index.html">V2</a><span> · </span><span class="active">V3</span>
+      </nav>
+      <p><a href="index.html" class="wizard-back-link">← Zurück zu V3</a></p>
+      <h1>Erfindungsbeschreibung</h1>
+      <p class="wizard-subtitle">Präzise, klar strukturiert, gut verständlich und schnell erstellt</p>
+    </header>
+
+    <div class="wizard-stepper" id="stepper">
+      <span data-stepper="0">Einleitung</span>
+      <span data-stepper="1">Kern identifizieren</span>
+      <span data-stepper="2">Stand der Technik</span>
+      <span data-stepper="3">Technische Lösung</span>
+      <span data-stepper="4">Struktur und Form</span>
+      <span data-stepper="5">Fehler vermeiden</span>
+      <span data-stepper="6">Ergebnis</span>
+    </div>
+
+    <div class="wizard-progress">
+      <div class="wizard-progress-bar">
+        <div class="wizard-progress-fill" style="width: 14.29%;"></div>
+      </div>
+      <span class="wizard-progress-text" id="progressText">Schritt 1 von 7</span>
+    </div>
+
+    <div class="wizard-step active" data-step="0">
+      <p class="wizard-step-label">Schritt 0</p>
+      <h2 class="wizard-step-title">Einleitung</h2>
+      <div class="wizard-block wizard-block-info">
+        <h3>Präzise Erfindungsbeschreibung – klar strukturiert, gut verständlich und schnell erstellt</h3>
+        <p>Eine überzeugende Erfindungsbeschreibung umfasst idealerweise ein bis zwei Seiten. Sie bringt auf den Punkt, was neu ist, warum es relevant ist und wie es funktioniert. Alle sollen in wenigen Minuten den entscheidenden Kniff und seinen Nutzen verstehen. Diese kurze, klare Basis ist der Startpunkt für Recherche zum Stand der Technik und die Ausarbeitung der Patentanmeldung.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Kernbegriffe kurz definiert</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Begriff</th><th>Definition</th></tr>
+              <tr><td><strong>Kern der Erfindung</strong></td><td>Das konkrete Problem, das deine Erfindung löst</td></tr>
+              <tr><td><strong>Stand der Technik</strong></td><td>Alles, was vor dem Anmeldetag öffentlich zugänglich war – Publikationen, Patente, Produkte, Vorträge</td></tr>
+              <tr><td><strong>Technische Lösung</strong></td><td>Die Gesamtheit der Maßnahmen/Schritte, mit denen die Aufgabe gelöst wird</td></tr>
+              <tr><td><strong>Durchschnittlich qualifizierte Fachperson</strong></td><td>Fachmann mit typischer Ausbildung/Erfahrung im Fachgebiet, aber ohne dein Spezialwissen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Was dieser Guide macht</h3>
+        <p>Dieser Guide führt dich durch <strong>6 Arbeits-Schritte</strong> (plus Einleitung): Kern der Erfindung identifizieren, Stand der Technik skizzieren, technische Lösung beschreiben, Struktur und Form der Erfindungsbeschreibung klären, typische Fehler vermeiden, Ergebnis sichern. In jedem Schritt kannst du direkt Notizen machen – am Ende stellst du daraus deine Rohfassung für die Erfindungsbeschreibung zusammen.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Typische Stolpersteine</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Stolperstein</th><th>Problem</th><th>Lösung</th></tr>
+              <tr><td><strong>Zu viel</strong></td><td>Seitenweise Gleichungen, Grundlagen, Vorversuche</td><td>Fokus auf das Wesentliche: Was ist neu? Was muss man tun?</td></tr>
+              <tr><td><strong>Zu wenig</strong></td><td>Vage Formulierungen, keine Abgrenzung zum Stand der Technik</td><td>Stand der Technik + Nachteile + deine Lösung klar darstellen</td></tr>
+              <tr><td><strong>Wie statt Warum</strong></td><td>Du leitest her, warum es funktioniert</td><td>Wichtige Regel: Beschreibe, was man tun muss, damit es funktioniert</td></tr>
+              <tr><td><strong>Falsche Zielgruppe</strong></td><td>Nur Experten verstehen es</td><td>Für „durchschnittlich qualifizierte Fachperson" schreiben</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="wizard-block limitations">
+        <p><strong>Wichtige Grenze</strong></p>
+        <p>Dies ist <strong>keine Rechtsberatung</strong>. Der Guide dient der Orientierung für die einfache Erstellung einer Erfindungsbeschreibung. Bei konkreten rechtlichen Fragen: immer Fachperson (Patentanwalt, TTO, Erfindungsberater:in) einbeziehen. Die Beispiele dienen der Veranschaulichung und sind KI-generiert.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="1">
+      <p class="wizard-step-label">Schritt 1</p>
+      <h2 class="wizard-step-title">Kern meiner Erfindung identifizieren</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Formuliere in 1–2 Sätzen, worin der Kern deiner Erfindung liegt, sodass eine Fachperson sie auf Anhieb versteht.</p>
+      </div>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Los geht's</span>
+        <p><strong>Leitfragen beantworten:</strong> Was macht deine Lösung anders? Welches konkrete Problem löst sie? Wo liegt der „Geistesblitz"?</p>
+        <p><strong>Abgrenzung zu Vorarbeit:</strong> Was war Vorarbeit? Was ist dein eigener Beitrag? Formuliere: „Das wesentliche Neue ist, dass ..."</p>
+        <p><strong>Formel:</strong> <em>„Das wesentliche Neue ist, dass [Objekt/Verfahren] nun [neue Eigenschaft/Fähigkeit] aufweist, indem [zentrale Maßnahme], wodurch [konkreter Vorteil gegenüber Stand der Technik]."</em></p>
+        <p><em>Notiere hier deinen 1-Satz-Kern (kannst du später in die Anlage übernehmen):</em></p>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiele</span>
+        <ul>
+          <li>Die Erfindung beschreibt eine Einweg-Pflasterelektrode, die den Blutzucker nichtinvasiv per Impedanzspektroskopie in Echtzeit misst und Bewegungs- sowie Feuchteeinflüsse kompensiert.</li>
+          <li>Die Erfindung beschreibt ein selbstjustierendes Fahrradschaltwerk, das Kettenlinie und Ritzelspiel automatisch ausrichtet, die Schaltzeit verkürzt und Fehlgänge reduziert.</li>
+          <li>Die Erfindung beschreibt einen Laufzeitplaner für Mehrkern-Prozessoren, der Threads topologie- und speicherzugriffsnah verteilt, Cache-Misses senkt und Energie spart.</li>
+          <li>Die Erfindung beschreibt eine ultradünne, amphiphile Beschichtung, die Biofouling auf Edelstahl verhindert und bei Raumtemperatur aufgetragen werden kann.</li>
+          <li>Die Erfindung beschreibt einen energieautarken Fenstersensor, der Wärmebrücken mittels Thermoelektrik und Mikro-Solarfilm detektiert, nur bei relevanten Gradienten sendet und jahrelang ohne Batterie auskommt.</li>
+        </ul>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="2">
+      <p class="wizard-step-label">Schritt 2</p>
+      <h2 class="wizard-step-title">Stand der Technik skizzieren</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Formuliere kurze Stichpunkte zu Prior Art und den Nachteilen bestehender Lösungen. Damit zeigst du die Lücke, die deine Erfindung schließt.</p>
+      </div>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Los geht's</span>
+        <p><strong>Prior Art recherchieren:</strong> Was gibt es bereits? Literatur angeben.</p>
+        <p><strong>Nachteile identifizieren:</strong> Für jede bekannte Lösung: Was funktioniert nicht? Was fehlt?</p>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <p>Einweg-Pflasterelektrode, die den Blutzucker nichtinvasiv per Impedanzspektroskopie in Echtzeit misst und Bewegungs- sowie Feuchteeinflüsse kompensiert:</p>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Bekannte Lösung</th><th>Nachteil</th></tr>
+              <tr><td>Blutzuckermessung per Fingerstich (Teststreifen + Glukoseoxidase)</td><td>Invasiv, schmerzhaft; Verbrauchsmaterialien; keine kontinuierliche Überwachung; Messlücken zwischen den Tests</td></tr>
+              <tr><td>Kontinuierliche Glukosemessgeräte (CGM) mit subkutanem Sensor/Filament</td><td>Invasiv (Einführen/Tragen eines Sensors); Hautirritationen; Sensorwechsel; Kalibrierbedarf; Zeitverzögerung (ISF-Lag)</td></tr>
+              <tr><td>Nichtinvasive optische Ansätze (z. B. NIR/Raman am Handgelenk)</td><td>Störanfällig durch Hautdicke, Pigmentierung, Schweiß; starke Bewegungsartefakte; variable Genauigkeit</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Fazit:</strong> Die Aufstellung muss nicht vollständig sein, aber es ist für uns hilfreich, wenn du das bekannte Wissen teilst.</p>
+        <p><strong>Übertrage auf deine Erfindung:</strong> Welche 2–3 bestehenden Lösungen kennst du? Welchen Nachteil hat jede davon?</p>
+        <p><em>Notiere hier 2–3 bekannte Lösungen + je einen Nachteil:</em></p>
+      </div>
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <p>Nicht zu ausführlich. Fokus auf die relevanten Lösungen und ihre Nachteile. Am Ende soll klar sein: Hier fehlt etwas – und deine Erfindung füllt diese Lücke.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="3">
+      <p class="wizard-step-label">Schritt 3</p>
+      <h2 class="wizard-step-title">Technische Lösung beschreiben</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Erstelle eine klare Lösungsskizze – was genau machst du? Wie funktioniert es? Nicht: Warum funktioniert es. Sondern: Was muss eine Fachperson tun, um die Erfindung auszuführen?</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Wichtige Regel für Erfindungsbeschreibungen</h3>
+        <p><em>„Do not describe why something works, but rather what one must do so that it works."</em></p>
+        <ul>
+          <li>Beschreibe die Schritte – nicht die Theorie dahinter</li>
+          <li>Zielgruppe: eine durchschnittlich qualifizierte Fachperson („average person skilled in the art")</li>
+          <li>Keine Seiten voller Gleichungen – nur das Nötige</li>
+        </ul>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <p>Einweg-Pflasterelektrode, die den Blutzucker nichtinvasiv per Impedanzspektroskopie in Echtzeit misst und Bewegungs- sowie Feuchteeinflüsse kompensiert.</p>
+        <p><strong>Vorher („Warum" – zu wissenschaftlich):</strong> Es funktioniert, weil die Impedanzspektroskopie Änderungen der elektrischen Eigenschaften von Haut und Interstitium erfasst, die mit der Glukosekonzentration korrelieren, und ein Modell die glukosebedingten Signale von Bewegungs- und Feuchteeinflüssen trennt.</p>
+        <p><strong>Nachher („Was tun" – hier genau richtig):</strong> „Damit es zuverlässig funktioniert, braucht es stabilen Hautkontakt und definierte Elektrodengeometrie, eine Mehrfrequenz-Anregung mit Referenzkanal, Sensorik/Algorithmen zur Kompensation von Bewegung und Schweiß sowie eine individuelle Kalibrierung und regelmäßige Validierung."</p>
+        <p><strong>Unterschied:</strong> Das erste erklärt den Mechanismus. Das zweite beschreibt, was man tun muss und was passiert – ohne Theorie.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Komponenten und Ablauf</h3>
+        <ul>
+          <li>Aus welchen Komponenten besteht deine Lösung?</li>
+          <li>Wie interagieren sie? (Ablauf, Datenfluss)</li>
+          <li>Welche Eingaben braucht man? Welche Ausgaben erhält man?</li>
+        </ul>
+        <p><em>Notiere hier deine Lösungsskizze (Eingabe → Schritte → Ausgabe):</em></p>
+      </div>
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <p><strong>Warum vs. Was:</strong> „Warum" = wissenschaftlich. „Was" = hier genau richtig. Gleichungen nur, wenn unverzichtbar.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="4">
+      <p class="wizard-step-label">Schritt 4</p>
+      <h2 class="wizard-step-title">Struktur und Form</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Eine strukturierte Gliederung, die typischen Anforderungen einer Erfindungsbeschreibung entspricht. Ca. 1–2 DIN A4 Seiten (ohne Skizzen), bei Bedarf (oder mit Skizzen) mehr. Skizzen einbinden.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Standard-Gliederung (typisch für Hochschul-Formulare)</h3>
+        <ol>
+          <li><strong>Aufgabe und Gebiet</strong> – Was ist das Problem? Welchem Bereich ist deine Erfindung zuzuordnen?</li>
+          <li><strong>Stand der Technik</strong> – Was existiert? Welche Nachteile? (mit Literatur)</li>
+          <li><strong>Behebung der Nachteile</strong> – Welche Lücke schließt deine Erfindung?</li>
+          <li><strong>Technische Lösung</strong> – Was genau machst du? Komponenten, Ablauf, Skizzen</li>
+          <li><strong>Vorteile</strong> – Konkrete Vorteile gegenüber dem Stand der Technik</li>
+          <li><strong>Literaturverzeichnis</strong> – Alle zitierten Quellen</li>
+        </ol>
+        <p><strong>Umfang:</strong> Typischerweise ca. 1–2 DIN A4 Seiten (oder mehr bei Bedarf). Vorversuche, Grundlagen: nur als Hilfsmittel, nicht als Kern.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="5">
+      <p class="wizard-step-label">Schritt 5</p>
+      <h2 class="wizard-step-title">Typische Fehler vermeiden</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Eine Checkliste, mit der du typische Fehler vermeidest – bevor du die Beschreibung deiner Universität einreichst.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Inhaltliche Checkliste</h3>
+        <ul>
+          <li>[ ] Kern der Neuerung klar formuliert (1–2 Sätze)</li>
+          <li>[ ] Stand der Technik mit Nachteilen dargestellt</li>
+          <li>[ ] Technische Lösung beschreibt, was man tun muss (nicht warum es funktioniert)</li>
+          <li>[ ] Vorteile gegenüber dem Stand der Technik genannt</li>
+          <li>[ ] Literatur zitiert und im Literaturverzeichnis aufgeführt</li>
+        </ul>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Was vermeiden?</h3>
+        <ul>
+          <li>Zu viel Theorie, zu wenig konkrete Schritte</li>
+          <li>Vage Formulierungen ohne Abgrenzung</li>
+          <li>Nur für Experten verständlich</li>
+        </ul>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Selbsttest</h3>
+        <p>Kannst du in einem Satz sagen, was deine Erfindung besser macht als Lösung X?</p>
+      </div>
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <p>Stell dir vor, ein:e Kolleg:in aus einem benachbarten Fachgebiet liest deine Beschreibung. Versteht sie oder er den Kern und die Lösung – ohne deine mündliche Erklärung?</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="6">
+      <p class="wizard-step-label">Schritt 6</p>
+      <h2 class="wizard-step-title">Ergebnis</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Du hast eine strukturierte Gliederung und eine Checkliste. Finde nun das Formular deiner Universität zum Einreichen deiner Erfindungsmeldung.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Zusammenfassung</h3>
+        <p>Du hast jetzt:</p>
+        <ul>
+          <li>Kern der Neuerung in 1–2 Sätzen</li>
+          <li>Stand der Technik mit Nachteilen</li>
+          <li>Technische Lösung (was tun, nicht warum)</li>
+          <li>Strukturierte Gliederung</li>
+          <li>Checkliste vor Abgabe</li>
+        </ul>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>TTO-Formular finden</h3>
+        <p><strong>Intranet deiner Hochschule:</strong> „Erfindungsmeldung", „Invention Disclosure", „Technologietransfer". Oft: Formular + Anlage (die technische Beschreibung). Die Anlage entspricht der Gliederung aus diesem Guide.</p>
+        <p>Weitere Links zu Hochschulen können bei der Transferstelle oder im TTO-Portal deiner Einrichtung eingesehen werden.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Nächste Aktion</h3>
+        <p>Reiche deine Erfindungsbeschreibung bei der Universität ein und vereinbare ein Erstgespräch.</p>
+      </div>
+      <div class="wizard-block handoff">
+        <h3>So geht's weiter</h3>
+        <p>Nach der Erfindungsmeldung folgt der <strong><a href="patentierungsprozess-v3.html">Patentierungsprozess</a></strong> – was passiert, wenn deine Erfindung in Anspruch genommen wird?</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../shared/design-templates/step-wizard/step-wizard.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var wizard = document.getElementById('wizard');
+    var stepper = document.getElementById('stepper');
+    if (typeof initStepWizard === 'function') {
+      function updateStepper(step) {
+        if (!stepper) return;
+        var spans = stepper.querySelectorAll('[data-stepper]');
+        spans.forEach(function(s, idx) {
+          s.classList.remove('active', 'done');
+          if (idx === step) s.classList.add('active');
+          else if (idx < step) s.classList.add('done');
+        });
+      }
+      initStepWizard(wizard, {
+        startAt: 0,
+        onStepChange: function(index) {
+          updateStepper(index);
+          var pt = document.getElementById('progressText');
+          if (pt) pt.textContent = 'Schritt ' + (index + 1) + ' von 7';
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

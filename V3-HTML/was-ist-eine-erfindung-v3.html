@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Was ist eine Erfindung? (V3)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/design-templates/step-wizard/step-wizard.css">
+</head>
+<body>
+
+<div class="wizard-app" id="wizard">
+  <div class="wizard-container">
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Übersicht</a><span> · </span><a href="../V2-HTML/index.html">V2</a><span> · </span><span class="active">V3</span>
+      </nav>
+      <p><a href="index.html" class="wizard-back-link">← Zurück zu V3</a></p>
+      <h1>Was ist eine Erfindung?</h1>
+      <p class="wizard-subtitle">Orientierung: Habe ich eine Erfindung? Was jetzt? Warum schnell sein? Wann publizieren?</p>
+    </header>
+
+    <div class="wizard-stepper" id="stepper">
+      <span data-stepper="0">Einleitung</span>
+      <span data-stepper="1">Habe ich eine Erfi…</span>
+      <span data-stepper="2">Ich habe eine Erfi…</span>
+      <span data-stepper="3">Warum schnell sein?</span>
+      <span data-stepper="4">Wann publizieren?</span>
+    </div>
+
+    <div class="wizard-progress">
+      <div class="wizard-progress-bar">
+        <div class="wizard-progress-fill" style="width: 20%;"></div>
+      </div>
+      <span class="wizard-progress-text" id="progressText">Schritt 1 von 5</span>
+    </div>
+
+    <div class="wizard-step active" data-step="0">
+      <p class="wizard-step-label">Schritt 0</p>
+      <h2 class="wizard-step-title">Einleitung</h2>
+      <div class="wizard-block wizard-block-info">
+        <h3>Was ist eine Erfindung?</h3>
+        <p>Eine Erfindung ist eine neue, konkrete und umsetzbare Lösung für ein spezifisches Problem. Sie geht über reine Beobachtungen hinaus und lässt sich in die Praxis überführen (Prototyp, Verfahren, System, technischer Effekt).</p>
+      </div>
+      <div class="wizard-block limitations">
+        <p><strong>Wichtige Grenze</strong></p>
+        <ul>
+          <li>Dies ist <strong>keine</strong> Bewertung deiner Idee/Erfindung: Dieser Check beurteilt nicht die Qualität oder Relevanz deiner Forschung.</li>
+          <li>Ergebnis = <strong>erste Einschätzung</strong>, ob eine Erfindung vorliegen könnte.</li>
+          <li>Nutze bei Fragen oder Unsicherheiten vor der Veröffentlichung die Beratung der Transferstelle deiner Universität.</li>
+        </ul>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Warum dieser Check?</h3>
+        <p>Viele Ideen scheitern nicht, weil sie schlecht sind, sondern weil man <strong>zu spät klärt</strong>, wie viel Potential in ihnen steckt:</p>
+        <ul>
+          <li>Viele Forschende haben nicht im Fokus, dass ihre Ergebnisse auch für die Industrie relevant sein können und sich häufig über Patente schützen lassen.</li>
+          <li>Patente lassen sich gezielt vermarkten und können dadurch in der Praxis angewendet werden.</li>
+          <li>Patente können Kooperationen eröffnen und die Finanzierung von Projekten erleichtern.</li>
+          <li>Deshalb gilt: Chancen erkennen und Potential nutzen.</li>
+        </ul>
+        <p><strong>Erst Patentieren, dann Publizieren:</strong> Publikationen und Patentierung schließen sich nicht aus – sie ergänzen sich, wenn die Reihenfolge stimmt. Wer frühzeitig prüft, ob sich Forschungsergebnisse patentieren lassen, erhöht die Wahrscheinlichkeit, dass gute Ideen nicht nur publiziert, sondern auch wirksam genutzt werden.</p>
+        <p>Dieser Check hilft dir, genau das zu verstehen.</p>
+      </div>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Klicke auf <strong>Weiter</strong>, um mit Schritt 1 (Habe ich eine Erfindung gemacht?) zu starten.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="1">
+      <p class="wizard-step-label">Schritt 1</p>
+      <h2 class="wizard-step-title">Habe ich eine Erfindung gemacht?</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Es muss nicht die Glühbirne oder das Rad sein – welche Erfindungen prägen unsere Gegenwart?</p>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Kategorie</th><th>Erklärung</th><th>Beispiel</th></tr>
+              <tr><td><strong>Produkt, Gerät oder Mechanik</strong></td><td>Wenn es ein physisches Objekt oder ein Mechanismus ist (Bauteil, Gerät, Konstruktion)</td><td>Neuer Verschluss, neues Ventil, neue Halterung, neue Mechanik</td></tr>
+              <tr><td><strong>Material, Chemie oder Verfahren</strong></td><td>Wenn Materialeigenschaften, Rezepturen, Beschichtungen oder ein Herstellprozess im Zentrum stehen</td><td>Neue Beschichtung, neue Mischung, neuer Prozessschritt</td></tr>
+              <tr><td><strong>Software, Algorithmus oder System</strong></td><td>Wenn die Lösung im Kern digital ist (Logik, Datenverarbeitung, Workflow, Modell)</td><td>Neue Matching-Logik, neue Pipeline, neues Steuerungssystem</td></tr>
+              <tr><td><strong>Medizin, Diagnostik oder Labor</strong></td><td>Wenn der Kern medizinisch oder diagnostisch ist</td><td>Neuer bzw. modifizierter Wirkstoff, neuer Assay, neues Testverfahren, neue Probenaufbereitung</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p><strong>Findest du dich wieder und hast eine bessere Vorstellung davon, was eine Erfindung sein kann?</strong></p>
+        <p><strong>Wähle</strong> aus der Tabelle oben die passende Kategorie. <strong>Bei Mischung:</strong> Wähle die Kategorie, die dem <strong>Kern deiner Erfindung</strong> am nächsten ist.</p>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <p><strong>Januar 2026</strong> – Maria, Postdoc am Lehrstuhl für Pharmazeutische Biochemie, entwickelt neue Wirkstoffe gegen Infektionskrankheiten. Ein Wirkstoffkandidat zeigt in Labortests eine hervorragende Aktivität gegen Pilzinfektionen. Maria plant, die Ergebnisse in einem Journal einzureichen, und überlegt, ob darin eine Erfindung steckt und eine Patentanmeldung vorab sinnvoll ist.</p>
+        <p>Maria stellt fest: Ja, hier liegt eine Erfindung vor. Es ist ein Wirkstoffkandidat, der eine ausgeprägte Aktivität gegen Pilzinfektionen hat.</p>
+      </div>
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <p>Gewählte Hauptkategorie + 1–2 Sätze, was an deiner Idee neu ist.</p>
+      </div>
+      <div class="wizard-block handoff">
+        <h3>Wenn du hier festhängst</h3>
+        <p>Melde dich gerne bei uns oder der Transferstelle deiner Universität. Wir helfen weiter.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="2">
+      <p class="wizard-step-label">Schritt 2</p>
+      <h2 class="wizard-step-title">Ich habe eine Erfindung gemacht – was jetzt?</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p><strong>Erfindung der Universität melden:</strong> Hast du eine Erfindung gemacht, so musst du diese zügig der Universität melden (wie das am besten geht, erfährst du im <a href="erfindungsbeschreibung-v3.html">Erfindungsbeschreibungscheck</a>). So kommt die Sache offiziell ins Rollen.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Was passiert dann? Der Arbeitgeber entscheidet.</h3>
+        <p>Der Arbeitgeber kann die Erfindung „in Anspruch nehmen" oder sie „freigeben".</p>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Wenn der Arbeitgeber die Erfindung <strong>in Anspruch nimmt</strong></th><th>Wenn der Arbeitgeber die Erfindung <strong>freigibt</strong></th></tr>
+              <tr><td>Schutzrechte anmelden: Der Arbeitgeber kümmert sich um die Anmeldung eines Patents.</td><td>Alle Rechte gehen auf die Erfinderin/den Erfinder über.</td></tr>
+              <tr><td>Keine Kosten für die Erfinder:innen: alle Amtsgebühren und Kosten für Patentanwält:innen trägt der Arbeitgeber.</td><td>Freie Bahn: Die Entscheidung über das weitere Vorgehen – z.B. Patentanmeldung ja oder nein – liegt bei Ihnen.</td></tr>
+              <tr><td>Erfinder:innen an Hochschulen erhalten 30 % der Einnahmen, die mit der Erfindung erzielt werden.</td><td>Volles Risiko, voller Ertrag: Kosten und Aufwand liegen bei Ihnen, dafür gehören mögliche Einnahmen auch vollständig Ihnen.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <p><strong>Januar 2026</strong> – Maria beginnt, ihre Ergebnisse für ein Manuskript aufzubereiten, und informiert sich darüber, wie sie die Erfindung bei ihrer Universität melden kann.</p>
+      </div>
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <p>Verständnis, dass die Meldung der Erfindung der erste Schritt ist – und was danach passieren kann.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="3">
+      <p class="wizard-step-label">Schritt 3</p>
+      <h2 class="wizard-step-title">Warum ist es wichtig, schnell zu sein?</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Verstehe, warum die Erfindung schnell gemeldet und die Patentanmeldung zügig eingereicht werden muss.</p>
+      </div>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Los geht's</span>
+        <p>Der <strong>Anmeldetag</strong> der Patentanmeldung ist der offizielle Zeitstempel. Ab hier wird festgelegt, was „vorher schon bekannt" war (Prioritätstag).</p>
+        <p><strong>Alles, was vor diesem Datum öffentlich war</strong> – Vortrag, Paper, Messe-Poster, Blogpost – kann die Patentanmeldung gefährden.</p>
+        <p><strong>Deshalb:</strong> Erst anmelden, dann erzählen. Kein Veröffentlichen, Präsentieren oder Posten vor der Einreichung der Patentanmeldung.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Patentanmeldung und Publikation</h3>
+        <p>Eine Patentanmeldung muss deine Paper-Publikation in der Regel nicht verzögern. Peer-Review-Verfahren sind normalerweise vertraulich – kläre die Policy des Journals vorab. Die Patentanmeldung kann parallel zum Peer-Review-Prozess ausgearbeitet und eingereicht werden. So gehen Veröffentlichung und Schutzrechte Hand in Hand.</p>
+      </div>
+      <div class="wizard-block wizard-block-info">
+        <h3>Typische Situationen – gilt das als Veröffentlichung?</h3>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Situation</th><th>Öffentlich?</th><th>Empfehlung</th></tr>
+              <tr><td>Internes Kolloquium</td><td>Meist nein</td><td>Trotzdem vorher mit TTO klären</td></tr>
+              <tr><td>Konferenz-Submission (noch nicht akzeptiert)</td><td>Kann als Veröffentlichung gelten, je nach Prozess</td><td>Unbedingt vor Einreichung klären</td></tr>
+              <tr><td>Preprint auf arXiv</td><td>Ja</td><td>Vor Upload Meldung der Erfindung + Strategie</td></tr>
+              <tr><td>GitHub (öffentlich)</td><td>Ja</td><td>Vor Veröffentlichung klären</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="wizard-block wizard-block-tip">
+        <span class="block-label">Tipp</span>
+        <p>Unsicher, ob etwas „öffentlich" ist? Behandle es als öffentlich. Lieber zu früh melden als zu spät.</p>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <p><strong>Februar 2026</strong> – Maria reicht die Erfindungsmeldung bei ihrer Universität ein und schreibt parallel am Manuskript für ihr Paper.</p>
+      </div>
+      <div class="wizard-block handoff">
+        <h3>Du bringst in den nächsten Schritt mit</h3>
+        <p>Verständnis für die Reihenfolge: Erst Meldung der Erfindung und Einreichung der Patentanmeldung, dann Veröffentlichung.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+        <button type="button" class="wizard-btn wizard-btn-primary" data-wizard-next>Weiter</button>
+      </div>
+    </div>
+
+    <div class="wizard-step" data-step="4">
+      <p class="wizard-step-label">Schritt 4</p>
+      <h2 class="wizard-step-title">Wann kann ich publizieren?</h2>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Deine Aufgabe</span>
+        <p>Verstehe, wie Patentierung und Publikation Hand in Hand gehen können – ohne Tempo zu verlieren.</p>
+      </div>
+      <div class="wizard-block wizard-block-action">
+        <span class="block-label">Los geht's</span>
+        <p>Warum zögern so viele beim Patentschutz? Oft, weil die Publikation drängt und man befürchtet, dadurch Tempo zu verlieren. Dabei gilt: Patentierung und Publikation können Hand in Hand gehen – wenn ihr früh genug daran denkt.</p>
+        <div class="wizard-table-wrap">
+          <table class="wizard-table">
+            <tbody>
+              <tr><th>Do's</th><th>Don'ts bis zur Patentanmeldung</th></tr>
+              <tr><td><strong>Früh starten:</strong> Meldet eure Erfindung, sobald ihr mit dem Paperschreiben loslegt. Das ist der Moment, an dem die Idee ohnehin gut greifbar und dokumentiert ist.</td><td>Nichts öffentlich vorstellen, posten oder als Preprint hochladen.</td></tr>
+              <tr><td><strong>Zeitfenster sichern:</strong> Diese frühe Erfindungsmeldung gibt dem Patentteam genug Luft, die Erfindung zu sichten und die Patentanmeldung rechtzeitig einzureichen.</td><td>Wenn ein Austausch nötig ist, nur vertraulich (NDA).</td></tr>
+              <tr><td><strong>Publikation ohne Stolperfallen:</strong> Ist die Patentanmeldung eingereicht, kann das Manuskript veröffentlicht werden – die Erfindung ist dann geschützt.</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Kurz gesagt:</strong> Erst sichern, dann publizieren. So verliert ihr keine Zeit – und eure Erfindung ist geschützt.</p>
+      </div>
+      <div class="wizard-block wizard-block-example">
+        <span class="block-label">Beispiel</span>
+        <p><strong>März 2026</strong> – Klaus, Marias Kollege, erkennt nach dem Gespräch mit Maria, dass auch er eine Erfindung gemacht hat. Er plant, seine Daten am 15. Mai auf einer Konferenz vorzustellen, und reicht deshalb ebenfalls eine Erfindungsmeldung ein.</p>
+      </div>
+      <div class="wizard-block handoff">
+        <h3>So geht's weiter</h3>
+        <p>Nicht alle Beteiligten verfügen über dein Expertenwissen. Umso entscheidender ist eine verständliche, gut strukturierte Darstellung.</p>
+        <p><strong>→ <a href="erfindungsbeschreibung-v3.html">Erfindungsbeschreibung</a></strong> – So beschreibst du deine Erfindung klar und nachvollziehbar für die Erfindungsmeldung.</p>
+      </div>
+      <div class="wizard-nav">
+        <button type="button" class="wizard-btn wizard-btn-secondary" data-wizard-prev>Zurück</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../shared/design-templates/step-wizard/step-wizard.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var wizard = document.getElementById('wizard');
+    var stepper = document.getElementById('stepper');
+    if (typeof initStepWizard === 'function') {
+      function updateStepper(step) {
+        if (!stepper) return;
+        var spans = stepper.querySelectorAll('[data-stepper]');
+        spans.forEach(function(s, idx) {
+          s.classList.remove('active', 'done');
+          if (idx === step) s.classList.add('active');
+          else if (idx < step) s.classList.add('done');
+        });
+      }
+      initStepWizard(wizard, {
+        startAt: 0,
+        onStepChange: function(index) {
+          updateStepper(index);
+          var pt = document.getElementById('progressText');
+          if (pt) pt.textContent = 'Schritt ' + (index + 1) + ' von 5';
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
